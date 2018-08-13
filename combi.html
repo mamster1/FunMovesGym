@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      background-color: #0014ab;
+      color: white;
+    }
+
+
+
+    #logo {
+      text-align: center;
+
+
+
+    }
+
+    #container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    footer {
+      text-align: center;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .tablink {
+      background-color: #00f5ff;
+      color: #0014ab;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 16px;
+      font-size: 20px;
+      width: 25%;
+    }
+
+    .tablink:hover {
+      background-color: #0014ab;
+      color: white;
+    }
+
+    .tablink:active {
+      background-color: #0014ab;
+      color: white;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      color: white;
+      display: none;
+      padding: 50px 20px;
+      text-align: center;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    #Welkom {background-color: #0014ab;}
+    #Info {background-color:#0014ab;}
+    #Diensten {background-color:#0014ab;}
+    #Contact {background-color:#0014ab;}
+
+    </style>
+  </head>
+  <body>
+
+    <div id="logo">
+      <img src="FMGfull.png" alt="logo van FunMovesGym" height="230" >
+    </div>
+
+    <div id="container">
+
+      <button class="tablink" onclick="openTab('Welkom', this, '#00f5ff')" id="defaultOpen">Welkom</button>
+      <button class="tablink" onclick="openTab('Info', this, '#00f5ff')">Info</button>
+      <button class="tablink" onclick="openTab('Diensten', this, '#00f5ff')">Diensten</button>
+      <button class="tablink" onclick="openTab('Contact', this, '#00f5ff')">Contact</button>
+
+      <div id="Welkom" class="tabcontent">
+        <h3>Welkom</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Vivamus quis tempus massa. Aenean erat nisl, gravida vel
+           vestibulum cursus, interdum sit amet lectus. Sed sit amet
+           quam nibh. Suspendisse quis tincidunt nulla. In hac
+           habitasse platea dictumst. Ut sit amet pretium nisl.
+           Vivamus vel mi sem. Aenean sit amet consectetur sem.
+           Suspendisse pretium, purus et gravida consequat, nunc
+           ligula ultricies diam, at aliquet velit libero a dui..
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Vivamus quis tempus massa. Aenean erat nisl, gravida vel
+           vestibulum cursus, interdum sit amet lectus. Sed sit amet
+           quam nibh. Suspendisse quis tincidunt nulla. In hac
+           habitasse platea dictumst. Ut sit amet pretium nisl.
+           Vivamus vel mi sem. Aenean sit amet consectetur sem.
+           Suspendisse pretium, purus et gravida consequat, nunc
+           ligula ultricies diam, at aliquet velit libero a dui..</p>
+      </div>
+
+      <div id="Info" class="tabcontent">
+        <h3>Info</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Vivamus quis tempus massa. Aenean erat nisl, gravida vel
+           vestibulum cursus, interdum sit amet lectus. Sed sit amet
+           quam nibh. Suspendisse quis tincidunt nulla. In hac
+           habitasse platea dictumst. Ut sit amet pretium nisl.
+           Vivamus vel mi sem. Aenean sit amet consectetur sem.
+           Suspendisse pretium, purus et gravida consequat, nunc
+           ligula ultricies diam, at aliquet velit libero a dui..</p>
+      </div>
+
+      <div id="Diensten" class="tabcontent">
+        <h3>Diensten</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Vivamus quis tempus massa. Aenean erat nisl, gravida vel
+           vestibulum cursus, interdum sit amet lectus. Sed sit amet
+           quam nibh. Suspendisse quis tincidunt nulla. In hac
+           habitasse platea dictumst. Ut sit amet pretium nisl.
+           Vivamus vel mi sem. Aenean sit amet consectetur sem.
+           Suspendisse pretium, purus et gravida consequat, nunc
+           ligula ultricies diam, at aliquet velit libero a dui..</p>
+      </div>
+
+      <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Vivamus quis tempus massa. Aenean erat nisl, gravida vel
+           vestibulum cursus, interdum sit amet lectus. Sed sit amet
+           quam nibh. Suspendisse quis tincidunt nulla. In hac
+           habitasse platea dictumst. Ut sit amet pretium nisl.
+           Vivamus vel mi sem. Aenean sit amet consectetur sem.
+           Suspendisse pretium, purus et gravida consequat, nunc
+           ligula ultricies diam, at aliquet velit libero a dui..</p>
+      </div>
+
+    </div>
+
+    <footer>
+      <h5><i class="fa fa-copyright" style="font-size:16px"></i> Fun Moves Gym</h5>
+
+
+
+    <script>
+    function openTab(cityName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(cityName).style.display = "inline-block";
+        elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+
+  </body>
+</html>

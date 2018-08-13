@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1">
+    <link rel="stylesheet" href="fmg.css">
+    <script src="fmg.js"></script>
+    <title>Fun Moves Gym</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+
+
+      <header>
+        <h1>Fun Moves Gym</h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="#home">home</a></li>
+          <li><a href="#info">info</a></li>
+          <li><a href="#diensten">diensten</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+
+
+      <!-- <img id="fotoBal" src="Kids.jpg" alt="basketball met kinderen"> -->
+
+
+
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img class="img" src="rolstoel.jpg" alt="bewegen met invaliden" style="width:100%">
+          <div class="text">Bewegen met invaliden</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img class="img" src="Kids.jpg" alt="bewegen met kinderen" style="width:100%">
+          <div class="text">Bewegen met kinderen</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img class="img" src="boksen.jpg" alt="boksen met elkaar" style="width:100%">
+          <div class="text">Bewegen met boksen</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img class="img" src="groep.jpg" alt="bewegen met een groep" style="width:100%">
+          <div class="text">Bewegen met een groep</div>
+        </div>
+
+      </div>
+      <br>
+      <div style="text-align: center;">
+        <span class="dot" onclick="showSlides(1)"></span>
+        <span class="dot" onclick="showSlides(2)"></span>
+        <span class="dot" onclick="showSlides(3)"></span>
+        <span class="dot" onclick="showSlides(4)"></span>
+      </div>
+
+
+
+      <article class="artikel">
+        <h2>Iedereen mag bewegen !!!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Vivamus quis tempus massa. Aenean erat nisl, gravida vel
+           vestibulum cursus, interdum sit amet lectus. Sed sit amet
+           quam nibh. Suspendisse quis tincidunt nulla. In hac
+           habitasse platea dictumst. Ut sit amet pretium nisl.
+           Vivamus vel mi sem. Aenean sit amet consectetur sem.
+           Suspendisse pretium, purus et gravida consequat, nunc
+           ligula ultricies diam, at aliquet velit libero a dui..</p>
+      </article>
+
+    </div>
+
+      <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 4000); // Change image every 2 seconds
+      }
+      </script>
+
+  </body>
+</html>
